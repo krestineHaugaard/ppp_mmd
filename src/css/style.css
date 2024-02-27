@@ -1,0 +1,32 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--col-font);
+}
+
+:root {
+  --col-background: rgb(242, 252, 232);
+  --col-font: rgb(17, 33, 0);
+  --col-fade-1: rgb(50, 82, 18);
+  --col-fade-2: rgb(86, 125, 47);
+  --col-fade-3: rgb(129, 167, 92);
+  --col-fade-4: rgb(180, 210, 150);
+}
+
+body {
+  background-color: var(--col-background);
+}
+
+/* layout animation */
+
+span {
+  display: block;
+  background-color: var(--col-fade-4);
+  animation: fade-color;
+  animation-timeline: scroll();
+}
+
+@keyframes fade-color {
+  to {
+    background-color: var(--col-fade-1);
+  }
+}

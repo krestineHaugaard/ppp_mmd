@@ -1,8 +1,42 @@
 ---
+import "../css/style.css";
+import "../css/layout.css";
 import MainLayout from "../layout/MainLayout.astro";
+import Shelve1 from "../components/Shelve1.astro";
+import Shelve2 from "../components/Shelve2.astro";
+import Shelve3 from "../components/Shelve3.astro";
+import Shelve4 from "../components/Shelve4.astro";
+import Shelve5 from "../components/Shelve5.astro";
 ---
 
 
 <MainLayout title = "Krestine Haugaard">
-
+	<header></header>
+    <main>
+		<span class="line_under_header"></span>
+		<span class="line_2"></span>
+		<Shelve1/>
+		<span class="line_3"></span>
+		<span class="line_4"></span>
+		<Shelve2/>
+		<span class="line_5"></span>
+		<span class="line_6"></span>
+		<Shelve3/>
+		<span class="line_7"></span>
+		<span class="line_8"></span>
+		<span class="line_9"></span>
+		<span class="line_10"></span>
+		<Shelve4/>
+		<span class="line_11"></span>
+		<span class="line_12"></span>
+		<span class="line_13"></span>
+		<Shelve5/>
+		<span class="line_above_footer"></span>    
+    </main>
+    <footer><p>© Krestine Haugaard 2024</p></footer>
+	
 </MainLayout>
+
+<script>
+	import "../js/js.js";
+</script>

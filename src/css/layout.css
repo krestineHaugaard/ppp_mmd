@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header,
+footer {
+  height: 50px;
+}
+
+/* span lines */
+
+span {
+  position: absolute;
+  z-index: -1;
+}
+
+.line_under_header,
+.line_above_footer {
+  position: static;
+  width: 100%;
+  height: 4px;
+}
+
+/* .line_2 {
+  width: ;
+  height: ;
+}
+
+.line_3 {
+  max-width: ;
+  height: ;
+}
+
+.line_4 {
+  width: ;
+  height: ;
+}
+
+.line_5 {
+  max-width: ;
+  height: ;
+}
+
+.line_6 {
+  width: ;
+  height: ;
+}
+
+.line_7 {
+  max-width: ;
+  height: ;
+}
+
+.line_8 {
+  width: ;
+  height: ;
+}
+
+.line_9 {
+  max-width: ;
+  height: ;
+}
+
+.line_10 {
+  width: ;
+  height: ;
+}
+
+.line_11 {
+  max-width: ;
+  height: ;
+}
+
+.line_12 {
+  max-width: ;
+  height: ;
+}
+
+.line_13 {
+  width: ;
+  height: ;
+} */
+
+@media (min-width: 1000px) {
+}
