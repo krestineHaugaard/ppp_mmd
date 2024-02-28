@@ -10,10 +10,17 @@
   --col-fade-2: rgb(86, 125, 47);
   --col-fade-3: rgb(129, 167, 92);
   --col-fade-4: rgb(180, 210, 150);
+  --fontsize-big: 30px;
+  --fontsize-medium: ;
+  --fontsize-small: ;
 }
 
 body {
   background-color: var(--col-background);
+}
+
+h1 {
+  font-size: var(--fontsize-big);
 }
 
 /* layout animation */
@@ -27,5 +34,15 @@ body {
 @keyframes fade-color {
   to {
     background-color: var(--col-fade-1);
+  }
+}
+
+/* media quarries */
+
+@media (min-width: 700px) {
+  :root {
+    --fontsize-big: 50px;
+    --fontsize-medium: ;
+    --fontsize-small: ;
   }
 }
