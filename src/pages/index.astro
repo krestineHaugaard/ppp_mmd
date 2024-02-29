@@ -7,6 +7,14 @@ import Shelve2 from "../components/Shelve2.astro";
 import Shelve3 from "../components/Shelve3.astro";
 import Shelve4 from "../components/Shelve4.astro";
 import Shelve5 from "../components/Shelve5.astro";
+
+const data = await fetch("https://cpuxdfmspwnxniqgowgm.supabase.co/rest/v1/mmd_projects_data",{
+	method:"GET",
+	headers: {
+		apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNwdXhkZm1zcHdueG5pcWdvd2dtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDkyMTEzNzIsImV4cCI6MjAyNDc4NzM3Mn0.pJOfovv7rx8pWwtOX0NE8fTA37sPeITTlsD5eNLXQYk"
+	},
+}
+).then(res=>res.json());
 ---
 
 
