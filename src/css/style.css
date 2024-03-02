@@ -3,6 +3,7 @@
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--col-font);
+  font-size: var(--fontsize-small);
 }
 
 :root {
@@ -10,13 +11,16 @@
   --col-box-right: rgb(21, 32, 25);
   --col-background: rgb(10, 15, 12);
   --col-font: rgb(202, 202, 202);
+  --col-hover: rgb(84, 170, 127);
   --fontsize-big: 30px;
   --fontsize-medium: ;
+  --fotsize-medium-small: ;
   --fontsize-small: ;
-  --padding-box-left: 10% 10% 10% 20%;
-  --padding-box-right: 10% 20% 10% 10%;
-  --margin-box: 10%;
+  --padding-box-left: 10% 10% 10% 15%;
+  --padding-box-right: 10% 15% 10% 10%;
+  --margin-box: 5%;
   --header-footer-height: 5rem;
+  --border-radius: 3rem;
 }
 
 body {
@@ -32,16 +36,33 @@ h1 {
   font-size: var(--fontsize-big);
 }
 
+h2 {
+  font-size: var(--fontsize-medium);
+  margin-bottom: 3rem;
+}
+
+h3 {
+  font-size: var(--fotsize-medium-small);
+}
+
+a:hover {
+  color: var(--col-hover);
+}
+
 .box_left {
   background-color: var(--col-box-left);
   margin-right: var(--margin-box);
   padding: var(--padding-box-left);
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
 }
 
 .box_right {
   background-color: var(--col-box-right);
   margin-left: var(--margin-box);
   padding: var(--padding-box-right);
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
 }
 
 /* media quarries */
@@ -49,8 +70,12 @@ h1 {
 @media (min-width: 700px) {
   :root {
     --fontsize-big: 50px;
-    --fontsize-medium: ;
-    --fontsize-small: ;
-    --header-footer-height: 10rem;
+    --fontsize-medium: 30px;
+    --fotsize-medium-small: 20px;
+    --fontsize-small: 18px;
+    --header-footer-height: 5rem;
+    --padding-box-left: 5% 10% 5% 25%;
+    --padding-box-right: 5% 25% 5% 10%;
+    --margin-box: 15%;
   }
 }

@@ -6,15 +6,31 @@ console.log(data);
 <article id={data.id}>
     <h3>{data.name}</h3>
     <img src={data.image} alt={data.alt_tag}>
-    <p>{data.description}</p>
-    <p>Link to project:</p>
-    <a title="Opens new fan" target="_blank" href={data.web_link}>Link!</a>
+    <details title="Unfold menu">
+        <summary>Project description</summary>
+        <p>{data.description}</p>
+    </details>
+    <a class="link" title="Opens new fan" target="_blank" href={data.web_link}>Project link!</a>
 </article>
 
 <style>
-
+    article{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1rem;
+        background-color: var(--col-background);
+        padding: 2rem;
+        border-radius: var(--border-radius);
+    }
     img{
-        max-width: 100%;
+        max-width: 70%;
+        align-self: center;
+        border-radius: 5px;
+    }
+
+    details p{
+        margin-top: 1rem;
     }
 
 </style>

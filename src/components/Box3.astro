@@ -12,7 +12,7 @@ const data = await fetch("https://cpuxdfmspwnxniqgowgm.supabase.co/rest/v1/mmd_p
 ---
 
 <article class="box_left">
-    <h2></h2>
+    <h2>Some of my projects</h2>
     <section>
         {data.map(project=>{
             return <ProjectCard data={project}/>
@@ -24,7 +24,8 @@ const data = await fetch("https://cpuxdfmspwnxniqgowgm.supabase.co/rest/v1/mmd_p
 
 section{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 2rem;
 }
 
 @media (min-width: 700px) {
