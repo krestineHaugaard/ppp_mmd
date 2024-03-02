@@ -1,0 +1,38 @@
+---
+import "../css/style.css";
+---
+
+<article class="box_left">
+    <div>
+        <h1>Krestine</h1>
+        <h1 class="space_in">Haugaard</h1>
+    </div>
+    <img src="./picture_of_creator.webp" alt="Picture of creator">
+</article>
+
+<style>
+
+    article{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+        gap: 2rem;
+    }
+
+    .space_in{
+        margin-left: 2rem;
+    }
+
+    img{
+        max-width: 100%;
+    }
+
+    @media (min-width: 700px) {
+        article{
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: auto;
+        }
+    }
+
+</style>

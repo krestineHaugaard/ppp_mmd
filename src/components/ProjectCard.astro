@@ -1,0 +1,20 @@
+---
+const {data} = Astro.props;
+console.log(data);
+---
+
+<article id={data.id}>
+    <h3>{data.name}</h3>
+    <img src={data.image} alt={data.alt_tag}>
+    <p>{data.description}</p>
+    <p>Link to project:</p>
+    <a title="Opens new fan" target="_blank" href={data.web_link}>Link!</a>
+</article>
+
+<style>
+
+    img{
+        max-width: 100%;
+    }
+
+</style>

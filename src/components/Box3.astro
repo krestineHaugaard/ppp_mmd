@@ -1,0 +1,36 @@
+---
+import "../css/style.css";
+import ProjectCard from "./ProjectCard.astro";
+
+const data = await fetch("https://cpuxdfmspwnxniqgowgm.supabase.co/rest/v1/mmd_projects_data",{
+	method:"GET",
+	headers: {
+		apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNwdXhkZm1zcHdueG5pcWdvd2dtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDkyMTEzNzIsImV4cCI6MjAyNDc4NzM3Mn0.pJOfovv7rx8pWwtOX0NE8fTA37sPeITTlsD5eNLXQYk"
+	},
+}
+).then(res=>res.json());
+---
+
+<article class="box_left">
+    <h2></h2>
+    <section>
+        {data.map(project=>{
+            return <ProjectCard data={project}/>
+        })}
+    </section>
+</article>
+
+<style>
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 700px) {
+    section{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+</style>

@@ -1,49 +1,16 @@
 ---
 import "../css/style.css";
-import "../css/layout.css";
 import MainLayout from "../layout/MainLayout.astro";
-import Shelve1 from "../components/Shelve1.astro";
-import Shelve2 from "../components/Shelve2.astro";
-import Shelve3 from "../components/Shelve3.astro";
-import Shelve4 from "../components/Shelve4.astro";
-import Shelve5 from "../components/Shelve5.astro";
-
-const data = await fetch("https://cpuxdfmspwnxniqgowgm.supabase.co/rest/v1/mmd_projects_data",{
-	method:"GET",
-	headers: {
-		apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNwdXhkZm1zcHdueG5pcWdvd2dtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDkyMTEzNzIsImV4cCI6MjAyNDc4NzM3Mn0.pJOfovv7rx8pWwtOX0NE8fTA37sPeITTlsD5eNLXQYk"
-	},
-}
-).then(res=>res.json());
+import Box1 from "../components/Box1.astro";
+import Box2 from "../components/Box2.astro";
+import Box3 from "../components/Box3.astro";
+import Box4 from "../components/Box4.astro";
 ---
 
 
 <MainLayout title = "Krestine Haugaard">
-	<header></header>
-    <main>
-		<div class="layout_decoration line_under_header"></div>
-		<div class="layout_decoration line_2"></div>
-		<Shelve1/>
-		<div class="layout_decoration line_3"></div>
-		<div class="layout_decoration line_4"></div>
-		<Shelve1/>
-		<div class="layout_decoration line_5"></div>
-		<div class="layout_decoration line_6"></div>
-		<Shelve1/>
-		<div class="layout_decoration line_7"></div>
-		<div class="layout_decoration line_8"></div>
-		<div class="layout_decoration line_9"></div>
-		<div class="layout_decoration line_10"></div>
-		<Shelve4/>
-		<div class="layout_decoration line_11"></div>
-		<div class="layout_decoration line_12"></div>
-		<div class="layout_decoration line_13"></div>
-		<Shelve5/>
-		<div class="layout_decoration line_above_footer"></div>    
-    </main>
-    <footer><p>© Krestine Haugaard 2024</p></footer>
+	   <Box1/>
+	   <Box2/>
+	   <Box3/>
+	   <Box4/>
 </MainLayout>
-
-<script>
-	import "../js/js.js";
-</script>

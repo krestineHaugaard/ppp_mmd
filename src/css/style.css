@@ -1,40 +1,47 @@
 * {
+  margin: 0;
+  padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--col-font);
 }
 
 :root {
-  --col-background: rgb(242, 252, 232);
-  --col-font: rgb(17, 33, 0);
-  --col-fade-1: rgb(50, 82, 18);
-  --col-fade-2: rgb(86, 125, 47);
-  --col-fade-3: rgb(129, 167, 92);
-  --col-fade-4: rgb(180, 210, 150);
+  --col-box-left: rgb(15, 23, 18);
+  --col-box-right: rgb(21, 32, 25);
+  --col-background: rgb(10, 15, 12);
+  --col-font: rgb(202, 202, 202);
   --fontsize-big: 30px;
   --fontsize-medium: ;
   --fontsize-small: ;
+  --padding-box-left: 10% 10% 10% 20%;
+  --padding-box-right: 10% 20% 10% 10%;
+  --margin-box: 10%;
+  --header-footer-height: 5rem;
 }
 
 body {
   background-color: var(--col-background);
 }
 
+header,
+footer {
+  height: var(--header-footer-height);
+}
+
 h1 {
   font-size: var(--fontsize-big);
 }
 
-/* layout animation */
-
-.layout_decoration {
-  background-color: var(--col-fade-4);
-  animation: fade-color;
-  animation-timeline: scroll();
+.box_left {
+  background-color: var(--col-box-left);
+  margin-right: var(--margin-box);
+  padding: var(--padding-box-left);
 }
 
-@keyframes fade-color {
-  to {
-    background-color: var(--col-fade-1);
-  }
+.box_right {
+  background-color: var(--col-box-right);
+  margin-left: var(--margin-box);
+  padding: var(--padding-box-right);
 }
 
 /* media quarries */
@@ -44,5 +51,6 @@ h1 {
     --fontsize-big: 50px;
     --fontsize-medium: ;
     --fontsize-small: ;
+    --header-footer-height: 10rem;
   }
 }

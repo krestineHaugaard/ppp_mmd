@@ -1,6 +1,5 @@
 ---
 import "../css/style.css";
-import "../css/layout.css";
 const {title} = Astro.props;
 ---
 
@@ -16,14 +15,20 @@ const {title} = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-        <slot/>
+		<header></header>
+    	<main>
+		 	<slot/>  
+    	</main>
+    	<footer><p>© Krestine Haugaard 2024</p></footer>
 	</body>
 </html>
 
 <style>
 
-</style>
+	footer{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
-<script>
-	import "../js/js.js";
-</script>
+</style>
