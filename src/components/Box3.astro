@@ -11,7 +11,7 @@ const data = await fetch("https://cpuxdfmspwnxniqgowgm.supabase.co/rest/v1/mmd_p
 ).then(res=>res.json());
 ---
 
-<article class="box_left">
+<article id="box" class="box_3 box_left hide">
     <h2>Some of my projects</h2>
     <section>
         {data.map(project=>{
@@ -35,3 +35,5 @@ section{
 }
 
 </style>
+
+<script src="../js/js.js"></script>

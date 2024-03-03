@@ -14,8 +14,16 @@ const {title} = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
-		<header></header>
+	<body data-theme="dark">
+		<header>
+			<div class="select_btns">
+				<button id="select_btn_me" class="box_select_button active_button">Me</button>
+				<button id="select_btn_who_am_i" class="box_select_button">Who am I?</button>
+				<button id="select_btn_projects" class="box_select_button">Projects</button>
+				<button id="select_btn_contact_information" class="box_select_button">Contact information</button>
+			</div>
+			<button title="Switch theme" class="theme_button">Dark mode</button>
+		</header>
     	<main>
 		 	<slot/>  
     	</main>
@@ -25,10 +33,6 @@ const {title} = Astro.props;
 
 <style>
 
-	footer{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
 </style>
+
+<script src="../js/js.js"></script>
